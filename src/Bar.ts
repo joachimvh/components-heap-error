@@ -1,4 +1,4 @@
-import { Foo } from './Foo';
+import { Foo } from './index';
 
 export class Bar {
   public constructor(
