@@ -1,0 +1,25 @@
+{
+  "@context": [ "https://linkedsoftwaredependencies.org/bundles/npm/components-heap-error/^0.0.0/components/context.jsonld" ],
+  "@graph": [
+    {
+      "@id": "urn:test:Foo",
+      "@type": "Foo",
+      "secret": "this parameter will be overrided by main_config.json."
+    },
+    {
+      "@id": "urn:test:Bar",
+      "@type": "Bar",
+      "foo": { "@id": "urn:test:Foo" }
+    },
+
+    {
+      "@id": "urn:test:FooOverride",
+      "@type": "Override",
+      "overrideInstance": { "@id": "urn:test:Foo" },
+      "overrideParameters": {
+        "@type": "Foo",
+        "secret": "s3cr3t_p4ssw0rd"
+      }
+    }
+  ]
+}
